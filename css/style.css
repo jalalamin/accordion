@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100vh;
+}
+h1{
+	font-family: arial;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 40px;
+	font-weight: 400;
+}
+.accordion{
+	width: 40%;
+	margin: 0 30%;
+	padding: 20px;
+	background: #ececec;
+	border-radius: 3px;
+	position: absolute;
+	top: 20%;
+}
+.ac{
+   margin-bottom: 20px;
+}
+.ac .ac-q{
+	color: #353535;
+	padding: 25px 30px;
+	font-size: 14px;
+	font-weight: 500;
+	background: #fff;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+	box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.5s;
+	outline: none;
+}
+.ac .ac-q:hover{
+	color: #fff;
+	background: #84ba3f;
+}
+.ac .ac-q::after {
+	content: '+';
+	text-align: center;
+	width: 15px;
+	right: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+	position: absolute;
+}
+
+.ac .ac-a {
+	overflow: hidden;
+	visibility: hidden;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+
+.ac .ac-a p {
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 25px;
+	letter-spacing: 1px;
+	text-align: justify;
+	color: #626262;
+	margin: 0;
+	padding: 10px;
+
+}
+
+.ac.active .ac-a {
+  	visibility: visible;
+}
+
+.ac.active .ac-q::after {
+  	content: '\2013';
+}
